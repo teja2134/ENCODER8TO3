@@ -1,7 +1,11 @@
 # ENCODER8TO3
+
 # AIM:
+
 To simulate and synthesis Encoder using vivado.
+
 # APPARATUS REQUIRED:
+
 vivado 2023.2 software.
 
 # PROCEDURE:
@@ -19,9 +23,42 @@ STEP:6 Click the simulation to simulate the program and give the inputs and veri
 
 STEP:7 compare the output with truth table.
 
+# DIAGRAM:
+
 ![image](https://github.com/RESMIRNAIR/ENCODER3TO8/assets/154305926/824226c8-c767-44b5-ab35-26fed65b195e)
-# Truth Table
+
+# TRUTH TABLE:
+
 ![image](https://github.com/RESMIRNAIR/ENCODER3TO8/assets/154305926/e228c14b-b814-40c8-92eb-748d48570c04)
-# Circuit Diagram
+
+# CIRCUIT DIAGRAM:
+
 ![image](https://github.com/RESMIRNAIR/ENCODER3TO8/assets/154305926/6fa5fe84-fe6f-472d-b9c0-e6dfa17413d3)
+
 ![image](https://github.com/RESMIRNAIR/ENCODER3TO8/assets/154305926/7d147e2a-ba03-4714-baee-17615c9c50c1)
+
+# VERILOG CODE:
+
+module encoder(d,a,b,c);
+
+input [7:0]d;
+
+output a,b,c;
+
+or (a,d[4],d[5],d[6],d[7]);
+
+or (b,d[2],d[3],d[6],d[7]);
+
+or (c,d[1],d[3],d[5],d[7]);
+
+endmodule
+
+# OUTPUT:
+
+<img width="838" alt="encoser8" src="https://github.com/teja2134/ENCODER8TO3/assets/161149578/9b9c4518-86e9-41bd-993c-d07dda0ce29f">
+
+# RESULT:
+
+Thus, the verilog program for Encoder  has been simulated and verified successfully.
+
+
